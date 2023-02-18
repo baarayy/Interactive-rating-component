@@ -3,45 +3,114 @@
     --orng: hsl(25, 97%, 53%);
     --wht: hsl(0, 0%, 100%);
     --litG: hsl(217, 12%, 63%);
-    --medG: hsl(216, 12%, 54%);
+/*    --medG: hsl(216, 12%, 54%);*/
+    --medG: hsla(216, 12%, 54%, 0.205);
     --drkB: hsl(213, 19%, 18%);
     --vdarkB: hsl(216, 12%, 8%);
 }
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Overpass', sans-serif;
-    color: white;
     box-sizing: border-box;
 }
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     background-color: var(--vdarkB);
 }
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: VAR(--drkB);
-}
-.star {
+.card {
+    width: 90%;
+    background-color: var(--drkB);
+    padding: 1.5em;
+    margin: 2em auto;
+    border-radius: 1.5em;
     
 }
-.rating {
+.heading {
+    font-size: 1.6rem;
     color: white;
+    margin-bottom: .5em;
+}
+.pargh {
+    margin-top: 0;
+    line-height: 1.7em;
+    font-size: .9rem;
+    color: var(--litG);
+}
+.star {
+    background-color: var(--medG);
+    border-radius: 50%;
+    padding: 1em;
+}
+.rating {
     display: flex;
     justify-content: space-between;
     margin: 1.7em 0;
     font-weight: bold;
 }
 .num {
-    background-color: var(--drkB);
-    width: 20px;
-    text-align: center;
+    background-color: var(--medG);
+    border-radius: 50%;
+    padding: 0.8em 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--litG);
+}
+.num:hover {
+    background-color: var(--litG);
+    color: white;
+}
+.num:active {
+    background-color: var(--orng);
+}
+input[type = "radio"] {
+    display: none;
+}
+.evaluation button {
+    text-transform: uppercase;
+    width: 100%;
+    background-color: var(--orng);
     border-radius: 2em;
-    color: var(--medG);
-    font-size: px;
+    border-style: none;
+    padding: 1em;
+    letter-spacing: 4px;
+    color:white;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+}
+.evaluation button:hover {
+    cursor: pointer;
+}
+.evaluation button:active {
+    background: white;
+    color: var(--orng);
+}
+/*---- second page styling starts here -------*/
+.evaluation {
+    display: none;
+}
+.thanks {
+/*    display: none;*/
+    text-align: center;
+}
+.thanks img {
+    margin-bottom: 1em;
+}
+.result {
+    margin-bottom: 0.2em;
+    color: var(--orng);
+    background: var(--medG);
+    padding: 0.4em 1.3em;
+    border-radius: 1em;
+    display: inline-block;
+}
+@media all and (min-width: 500px) {
+    .card {
+        padding: 1.9em;
+        width: 400px;
+    }
 }
