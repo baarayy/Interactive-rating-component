@@ -91,10 +91,10 @@ input[type = "radio"] {
 }
 /*---- second page styling starts here -------*/
 .evaluation {
-    display: none;
+    display: block;
 }
 .thanks {
-/*    display: none;*/
+    display: none;
     text-align: center;
 }
 .thanks img {
