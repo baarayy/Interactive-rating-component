@@ -89,10 +89,14 @@ input[type = "radio"] {
     background: white;
     color: var(--orng);
 }
-/*---- second page styling starts here -------*/
 .evaluation {
     display: block;
 }
+.select {
+    background: var(--litG);
+    color: white;
+}
+/*---- second page styling starts here -------*/
 .thanks {
     display: none;
     text-align: center;
